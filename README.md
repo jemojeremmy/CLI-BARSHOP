@@ -6,7 +6,7 @@
  Schedule an appointment
  View appointments
 # Usage
-Install dependencies: pipenv install
+1.Install dependencies: `pipenv install`
 Activate the virtual environment: pipenv shell
 Initialize the database: python database/setup.py
 Run the CLI: python main.py
