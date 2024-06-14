@@ -7,8 +7,7 @@ class Appointment(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     customer_id = Column(Integer, ForeignKey("customers.id"), nullable=False)
-    appointment_date = Column(DateTime, nullable=False)
+    appointment_date = Column(String, nullable=False)
     service = Column(String, nullable=False)
 
     customer = relationship("Customer", back_populates="appointments")
-

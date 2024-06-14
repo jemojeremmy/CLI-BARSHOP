@@ -8,4 +8,6 @@ Base = declarative_base()
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 session = Session()
 
-Base.metadata.create_all(engine)
+def init_db():
+    from models import Applicant, Appointment, Customer
+    Base.metadata.create_all(bind=engine)
